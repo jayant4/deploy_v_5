@@ -23,10 +23,10 @@ for basename in os.listdir(folder):
         fnames.append(fname)
 
 # Make a UI to run different files.
-only_names=[i[i.index("_2")+2:] for i in fnames]
+# only_names=[i[i.index("_2")+2:] for i in fnames]
 fname_to_run=os.path.join(folder)
 
-fname_to_run += st.selectbox('Select an app', only_names)
+fname_to_run += st.selectbox('Select an app', fnames)
 
 
 
