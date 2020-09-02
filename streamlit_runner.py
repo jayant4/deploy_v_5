@@ -18,17 +18,12 @@ fnames = []
 for basename in os.listdir(folder):
     fname = os.path.join(folder, basename)
 
-
     if fname.endswith('.py') and fname != this_file:
         fnames.append(fname)
 
 # Make a UI to run different files.
-# only_names=[i[i.index("_2")+2:] for i in fnames]
-fname_to_run=os.path.join(folder)
-
-fname_to_run += st.selectbox('Select an app', fnames)
-
-
+only_names=[i[i.index("")+5:] for i in fnames]
+fname_to_run = st.sidebar.selectbox('Select an app', fnames)
 
 # Create module from filepath and put in sys.modules, so Streamlit knows
 # to watch it for changes.
@@ -53,4 +48,5 @@ with open(fname_to_run) as f:
 
 exec(filebody, {})
 
-
+# for i in fnames:
+#     print(i[i.index("demo")+5:-3])
