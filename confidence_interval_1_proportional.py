@@ -2,10 +2,10 @@ import math
 import scipy.stats
 import streamlit as st
 
-st.title("Confidence Interval 1 Proportional")
+st.title(" 1 Proportional Confidence Interval")
 
-n=st.number_input("Enter n Value")#70
-x=st.number_input("Enter x Value")#30
+n=st.number_input("Enter Sample Size n Value")#70
+x=st.number_input("Enter Sample mean x Value")#30
 significance_level=st.number_input("Enter Significance level")#0.05
 
 def enter_decimal_places():
