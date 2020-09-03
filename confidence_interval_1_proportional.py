@@ -6,7 +6,7 @@ st.title("Confidence Interval 1 Proportional")
 
 n=st.number_input("Enter n Value")#70
 x=st.number_input("Enter x Value")#30
-significance_level=st.number_input("Enter Significance level")#0.05
+significance_level=st.number_input("Enter Significance level, α value")#0.05
 
 def enter_decimal_places():
     decimal_places=st.selectbox("Enter number of decimal places :",(1,2,3,4))
